@@ -12,7 +12,6 @@
 
 * const port = 8090; => 8080
 
-
 # installation des dépendances listées dans le package.json
 yarn
 
@@ -52,3 +51,5 @@ npm run {script}
 - `clean:all`: Supprime `dist/`, `node_modules/` et les fichiers `lock`.
 
 ---
+
+(Pour rappel, dans vsc, raccourcis `CTRL + K, M` pour changer de type de fichier js => javascriptreact )
