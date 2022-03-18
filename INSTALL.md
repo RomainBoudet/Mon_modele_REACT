@@ -7,6 +7,12 @@
 * cp -n ../Mon_modele_REACT/{.*,*} .
 * cp -rn ../Mon_modele_REACT/{src,config,public} .
 
+
+* # On change de port dans le fichier config/webpack.dev :
+
+* const port = 8090; => 8080
+
+
 # installation des dépendances listées dans le package.json
 yarn
 
