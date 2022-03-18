@@ -1,6 +1,12 @@
 📦 React Modele
 ===============
 
+# Pour importer ce projet :
+
+
+* cp -n ../Mon_modele_REACT/{.*,*} .
+* cp -rn ../Mon_modele_REACT/{src,config,public} .
+
 # installation des dépendances listées dans le package.json
 yarn
 
