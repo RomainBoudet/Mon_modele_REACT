@@ -2,12 +2,13 @@
   width: 500px;
   margin: 1em auto;
   text-align: center;
-}
 
-.app img {
-  max-width: 150px;
-}
+  & img {
+    max-width: 150px;
+  }
 
-.app h1 {
-  margin: 2rem;
+  & h1 {
+    margin: 2rem;
+  }
+
 }

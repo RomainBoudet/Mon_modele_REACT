@@ -7,7 +7,7 @@ import React from 'react';
 // == Import
 import reactLogo from './react-logo.svg';
 import romLogo from './RB.png';
-import './styles.css';
+import './styles.scss';
 
 // == Composant
 const App = () => (
