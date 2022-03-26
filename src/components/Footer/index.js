@@ -1,6 +1,8 @@
 // import npm
 import React from 'react';
 import PropTypes from 'prop-types';
+// import { Routes, Route, Outlet, Link } from "react-router-dom";
+
 
 // import style
 import './style.scss';
