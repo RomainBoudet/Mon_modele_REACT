@@ -4,17 +4,19 @@
 // == Import npm
 import React from 'react';
 
+
 // == Import
-import reactLogo from './react-logo.svg';
-import romLogo from './RB.png';
 import './styles.scss';
+import Header from '../Header';
+import Main from '../Main';
+import Footer from '../Footer';
 
 // == Composant
 const App = () => (
   <div className="app">
-    <img src={reactLogo} alt="react logo" />
-    <img src={romLogo} alt="Romain Boudet logo" />
-    <h1>Ho..., le beau front qu'ont va faire en REACT...</h1>
+    <Header propsHeader={"REACT !"} />
+    <Main propsMain={"toujours en React !"} />
+    <Footer propsFooter={(new Date).getFullYear()} />
   </div>
 );
 

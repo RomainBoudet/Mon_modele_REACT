@@ -7,6 +7,8 @@
 * cp -n ../Mon_modele_REACT/{.*,*} .
 * cp -rn ../Mon_modele_REACT/{src,config,public} .
 
+* -n pour do not overwrite et -r pour recursive
+
 
 * # On change de port dans le fichier config/webpack.dev :
 
