@@ -4,7 +4,6 @@
 // == Import npm
 import React from 'react';
 
-
 // == Import
 import './styles.scss';
 import Header from '../Header';
@@ -14,11 +13,10 @@ import Footer from '../Footer';
 // == Composant
 const App = () => (
   <div className="app">
-    <Header propsHeader={"REACT !"} />
-    <Main propsMain={"toujours en React !"} />
-    <Footer propsFooter={(new Date).getFullYear()} />
+    <Header propsHeader="REACT !" />
+    <Main propsMain="toujours en React !" />
+    <Footer propsFooter={(new Date()).getFullYear()} />
   </div>
 );
-
 // == Export
 export default App;

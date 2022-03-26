@@ -5,16 +5,14 @@ import PropTypes from 'prop-types';
 // import style
 import './style.scss';
 
-//import react
+// import react
 
-
-const Footer = ({propsFooter}) => (
+const Footer = ({ propsFooter }) => (
   <footer>
-        <span> Ⓒ Romain Boudet - {propsFooter} </span>
+    <span> Ⓒ Romain Boudet - {propsFooter} </span>
   </footer>
-  
-)
 
+);
 
 /* Exmaple.propTypes = {
   ingredients: PropTypes.arrayOf(PropTypes.shape({

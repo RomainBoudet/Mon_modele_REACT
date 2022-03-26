@@ -5,16 +5,14 @@ import PropTypes from 'prop-types';
 // import style
 import './style.scss';
 
-//import react
+// import react
 
-
-const Main = ({propsMain}) => (
+const Main = ({ propsMain }) => (
   <main>
-        <h1>Mon body {propsMain} </h1>
+    <h1>Mon body {propsMain} </h1>
   </main>
-  
-)
 
+);
 
 /* Exmaple.propTypes = {
   ingredients: PropTypes.arrayOf(PropTypes.shape({
