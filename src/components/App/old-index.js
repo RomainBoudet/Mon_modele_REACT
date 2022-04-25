@@ -7,15 +7,15 @@ import { Route } from 'react-router-dom';
 
 // == Import
 import './styles.scss';
-import Header from '../../containers/Header';
-import Main from '../../containers/Main';
+import Header from '../Header';
+import Main from '../Main';
 import Footer from '../Footer';
 
 // == Composant
 const App = () => (
   <div className="app">
-    <Header />
-    <Main />
+    <Header propsHeader="REACT !" />
+    <Main propsMain="toujours en React !" />
     <Footer propsFooter={(new Date()).getFullYear()} />
   </div>
 );

@@ -8,9 +8,9 @@ import './style.scss';
 
 // import react
 
-const Main = ({ propsMain }) => (
+const Main = ({ messageMain }) => (
   <main>
-    <h1>Mon body {propsMain} </h1>
+    <h1>{ messageMain } </h1>
   </main>
 
 );
@@ -24,7 +24,7 @@ const Main = ({ propsMain }) => (
 }; */
 
 Main.propTypes = {
-  propsMain: PropTypes.string.isRequired,
+  messageMain: PropTypes.string.isRequired,
 };
 
 export default Main;

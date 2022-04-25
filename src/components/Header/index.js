@@ -10,11 +10,11 @@ import './style.scss';
 import reactLogo from './react-logo.svg';
 import romLogo from './RB.png';
 
-const Header = ({ propsHeader }) => (
+const Header = ({ message }) => (
   <header>
     <img src={reactLogo} alt="react logo" />
     <img src={romLogo} alt="Romain Boudet logo" />
-    <h1>Ho..., le beau front qu'on va faire en {propsHeader} </h1>
+    <h1>{ message } </h1>
   </header>
 );
 
@@ -27,7 +27,7 @@ const Header = ({ propsHeader }) => (
 }; */
 
 Header.propTypes = {
-  propsHeader: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
 };
 
 export default Header;
