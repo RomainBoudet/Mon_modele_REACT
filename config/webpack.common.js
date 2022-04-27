@@ -1,5 +1,7 @@
 const paths = require('./paths');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {
+  CleanWebpackPlugin
+} = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -24,12 +26,10 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
-      patterns: [
-        { 
-          from: paths.static,
-          to: '',
-        }
-      ],
+      patterns: [{
+        from: paths.static,
+        to: '',
+      }],
     }),
 
     new HtmlWebpackPlugin({
@@ -44,35 +44,48 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              cacheDirectory: true,
-            },
+        use: [{
+          loader: 'babel-loader',
+          options: {
+            cacheDirectory: true,
           },
-        ],
+        }, ],
       },
 
       // Fonts
       {
         test: /\.(woff2?|eot|ttf|otf)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[hash][ext][query]'
+        }
+      },
+      // Images
+      {
+        test: /\.(ico|gif|png|jpe?g|webp|svg)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[hash][ext][query]'
+        }
+      },
+
+      // Old méthodes 
+      /*       {
+        test: /\.(woff2?|eot|ttf|otf)$/,
         loader: 'file-loader',
         options: {
           outputPath: 'fonts/',
         },
-      },
-
-      // Images
-      {
-        test: /\.(ico|gif|png|jpe?g|webp|svg)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: { outputPath: 'images/' },
-          },
-        ],
-      },
+      }, */
+      /*       {
+              test: /\.(ico|gif|png|jpe?g|webp|svg)$/i,
+              use: [
+                {
+                  loader: 'file-loader',
+                  options: { outputPath: 'images/' },
+                },
+              ],
+            }, */
     ],
   },
 };
