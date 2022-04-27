@@ -8,6 +8,9 @@ import axios from 'axios';
   activePage,
 } from 'src/actions' */;
 
+
+// Une fonction qui return une fonction qui return une fonction !
+
 const middleware = (store) => (next) => (action) => {
   /* switch (action.type) {
     case FETCH_DATA: {
