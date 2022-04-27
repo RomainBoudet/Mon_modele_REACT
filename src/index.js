@@ -13,7 +13,6 @@ import App from 'src/components/App';
 // == Render
 //! update pour V18
 // https://reactjs.org/blog/2022/03/08/react-18-upgrade-guide.html
-// https://reactjs.org/blog/2022/03/08/react-18-upgrade-guide.html
 
 // 1. Élément React racine (celui qui contient l'ensemble de l'app)
 //    => crée une structure d'objets imbriqués (DOM virtuel)
