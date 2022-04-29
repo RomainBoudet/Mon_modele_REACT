@@ -10,11 +10,11 @@ import axios from 'axios';
 
 
 // Une fonction qui return une fonction qui return une fonction !
+// ma fonction n'est plus une fonction mais une promesse avec async devant ! Redux à l'air de gérer ça trés bien ici !
 
-const middleware = (store) => (next) => (action) => {
+const middleware = (store) => (next) => async (action) => {
   /* switch (action.type) {
     case FETCH_DATA: {
-      const FetchData = async () => {
         const state = store.getState();
 
         store.dispatch(loading(true));
@@ -35,12 +35,10 @@ const middleware = (store) => (next) => (action) => {
         finally {
           store.dispatch(loading(false));
         }
-      };
-      FetchData();
+
       break;
     }
     case FETCH_MORE_DATA: {
-      const fetchMoreData = async () => {
         const state = store.getState();
 
         store.dispatch(activePage(state.activePage + 1));
@@ -62,8 +60,6 @@ const middleware = (store) => (next) => (action) => {
         finally {
           store.dispatch(loading(false));
         }
-      };
-      fetchMoreData();
       break;
     } 
     default:
