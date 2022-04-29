@@ -11,7 +11,7 @@ import Main from '../components/Main';
 // Si rien ne doit provenir de mon state dans ce container => mapStateToProps = null
 const mapStateToProps = (state) => ({
   // loading: state.loading,
-  messageMain: state.messageMain,
+  messageMain: state.subReducer2.messageMain,
   // inputSearch: state.inputSearch,
   // inputValidate: state.inputValidate,
 });

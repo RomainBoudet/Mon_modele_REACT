@@ -60,6 +60,7 @@
     "react-router-dom": "^6.3.0",
     "react-spinners": "^0.11.0",
     "redux": "^4.2.0",
+    "redux-devtools-extension": "^2.13.9",
     "yarn-upgrade-all": "^0.7.1"
   }
 }

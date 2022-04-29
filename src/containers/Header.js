@@ -10,7 +10,7 @@ import Header from '../components/Header';
 // avec state.quelqueChose, je donne des props qui viennent du state.
 // Si rien ne doit provenir de mon state dans ce container => mapStateToProps = null
 const mapStateToProps = (state) => ({
-  message: state.message,
+  message: state.subReducer1.message,
 });
 
 // Si rien ne doit changer mon state => mapDispatchToProps = {}
