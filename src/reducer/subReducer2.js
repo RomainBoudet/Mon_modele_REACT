@@ -41,3 +41,5 @@
   };
   
   export default reducer;
+
+  //! stop au boolan pour loading : https://redux.js.org/tutorials/fundamentals/part-7-standard-patterns#loading-state-enum-values
