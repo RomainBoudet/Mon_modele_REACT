@@ -100,7 +100,14 @@ return (
 )
 }
 
-
-
-
 ```
+
+
+### Mieux comprendre le comportement de React :
+
+Le comportement par défaut de React est que lorsqu'un composant parent est rendu, React rendra récursivement tous les composants enfants à l'intérieur de celui-ci ! 
+Si nous appelons à filter(  à l'intérieur d'un useSelector, afin de ne renvoyer que la liste des publications appartenant à un utilisateur. Malheureusement, cela signifie que le return du useSelector renvoie toujours une nouvelle référence de tableau, et donc notre composant sera restitué après chaque action même si les données dans filter n'ont pas changé !
+
+doc : httpshttps://blog.isquaredsoftware.com/2020/05/
+* blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/
+* https://redux.js.org/tutorials/essentials/part-6-performance-normalization#improving-render-performance

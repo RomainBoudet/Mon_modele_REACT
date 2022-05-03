@@ -54,3 +54,28 @@ export default connect(mapStateToProps, mapDispatchToProps)(Header);
 // je me demande si mon composant a besoin de consulteer le state ? si Non => mapStateToProp = null
 // Je me demande si mon composant a besoin de dispatcher des actions ? Si non, mapsDispatchToProps = {}
 // Si oui, je lui passe ce qu'attend mon dumb composant !
+
+
+//! amélioration des performances : En utilisant l'outil Profiler du dev Tool, 
+//! on pourrait avoir le cas d'un re-render d'un composant alors que ses données n'ont pas cahngés ! 
+//! Comme pour par exemple, si un filter() est présent dans un smart component, même si les données du tableau filter
+//! sont identique à celui rendu précédemment, comme filter renvoie une nouvelle référence de tableau,
+//! notre tableau issu du filter utilisé dans un useSelector, fera que le composant dans lequel il est est présent sera re-rendu a chaque fois ! 
+//! pour lutter contre ça, on peut mettre en oplace des fonction de memorisation :
+//! ReduxToolkit contient createSelector() qui utilise reselect, qui génère des sélecteurs mémorisés
+//! qui ne recalculeront les résultats que lorsque les entrées changeront.
+
+//! import { createSelector } from'@reduxjs/toolkit
+// ici je filtre des posts selon un user :
+//! allPosts.filter(post => post.user === userId)
+// ici à chaque rendu, le retour du filter sera toujours une nouvelle référence et notre composnant sera toujours re-rendu
+// même si les post sont identique !
+//! const selectUserPost = createSelector(
+//! allPosts.filter(post => post.user === userId)
+//! )
+
+// doc : 
+// https://github.com/reduxjs/reselect#redux-toolkit
+// https://redux.js.org/tutorials/essentials/part-6-performance-normalization#memoizing-selector-functions
+
+
