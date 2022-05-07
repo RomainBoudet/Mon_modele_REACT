@@ -9,7 +9,7 @@ import Header from '../components/Header';
 // nom par convention, recoit le state comme propriété
 // avec state.quelqueChose, je donne des props qui viennent du state.
 // Si rien ne doit provenir de mon state dans ce container => mapStateToProps = null
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state, ownProps) => ({
   message: state.subReducer1.message,
 });
 
