@@ -9,6 +9,8 @@ import Main from '../components/Main';
 // nom par convention, recoit le state comme propriété
 // avec state.quelqueChose, je donne des props qui viennent du state.
 // Si rien ne doit provenir de mon state dans ce container => mapStateToProps = null
+
+// ownProp, propriété qui sont envoyé au composant lui même, lorque le <Composant /> est appelé !
 const mapStateToProps = (state, ownProps) => ({
  
   messageMain: state.subReducer2.messageMain,
