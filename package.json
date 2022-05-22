@@ -1,6 +1,8 @@
 {
   "name": "react-modele",
   "scripts": {
+    "test": "cross-env NODE_PATH=./ mocha --require tests/.setup.js './{,!(node_modules)/**/}*.test.js'",
+    "test:watch": "cross-env NODE_PATH=./ mocha --watch --require tests/.setup.js './{,!(node_modules)/**/}*.test.js'",
     "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
     "lint": "eslint src/**/*.js",
